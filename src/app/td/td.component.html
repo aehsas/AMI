@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Details</title>
+</head>
+<body>
+    <div class="card">
+        <div class="heading">
+           <h2><span>Test Details </span></h2>
+        </div>
+       
+        <section>
+        
+          <div class=" container">
+            <h3>Serial.No: {{this.value.SerialNo}}</h3>
+            <h3>Category: {{this.value.Category}}</h3>
+          </div>
+            
+         
+          
+           <div class="table">
+            <table>
+              <tr>
+                <th><b>Sr.No</b></th>
+                <th><b>Test Name</b></th>
+               <th><b>Status</b></th>
+                 <th><b>Comments</b></th>
+                <th><b>Date</b></th>
+              </tr>
+              <tr *ngFor="let da of this.valuess; let i = index">
+                
+                <td>{{i+1}}</td>
+                <td>{{da.testname}}</td>
+                <td>{{da.status}}</td>
+                 <td>{{da.comment}}</td>
+                 <td>{{da.Date}} {{da.times}}</td>
+               
+              </tr>
+                
+               
+              
+            </table>
+           </div>
+         
+         
+        </section>
+
+        <div class="but">
+            <button (click)="onSubmit()" type="submit">Back</button>
+        </div>
+    </div>
+   
+
+
+</body>
+</html>

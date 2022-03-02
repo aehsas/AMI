@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log-in</title>
+</head>
+<body>
+  <div class="wrapper">
+      
+    <section class="left">
+      <form>
+      <div class="card">
+        <div class= "log-logo">
+          <img src="/assets/images/login.png" width= "32%" alt="">
+        </div>
+        
+          <input class="card__username" [(ngModel)] = "LoginUserData.name" id="name" name="name"  placeholder="Username" required >
+          <input class="card__password"  [(ngModel)] = "LoginUserData.password" type="password" name="password" placeholder="Password" required>
+           <a  (click)="onSubmit()" class="card__button" type="submit">Login</a>
+           <p class="card__forgotpw">Forgot password? <a href=# class="card__forgotpw--reset">Reset now</a></p>
+        
+      </div>
+    </form>
+    </section>
+
+    <section class="right">
+      <div class="right__overlay"></div>
+      <img src="/assets/images/ami-logo.webp" alt="logo" width="50%">
+    </section>
+    
+  </div> 
+</body>
+</html>

@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .wrapper {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* layouts */
+  
+  .left,
+  .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+  }
+  .left
+  {
+    background-color: #fff;
+    width: 55vw;
+  }
+  .right {
+    
+    background-color: rgba(0, 0, 0, 0.747);
+    color: #fff;
+    position: relative;
+    width: 45vw;
+  }
+  
+  .right__overlay {
+    width: 100%;
+    height: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .right__heading {
+    z-index: 2;
+    font-weight: 300;
+    font-size: 24px;
+  }
+  
+  /* card */ 
+  
+  .card {
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    padding: 25px;
+    border: none;
+    /*box-shadow: 0 0 24px rgba(158, 158, 158, 0.5);*/
+    
+    display: flex;
+    flex-direction: column;
+  }
+  .log-logo
+  {
+      padding: 17px;
+      display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .card__logo {
+    font-size: 24px;
+  }
+  
+  .card__logo,
+  .card__username,
+  .card__password {
+    margin-bottom: 25px;
+  }
+  
+  .card__username,
+  .card__password {
+    padding: 8px 12px;
+    outline: none;
+    border: none;
+    border: 1px solid transparent;
+    background-color: #EEEEEE;
+    transition: 250ms ease;
+  }
+  
+  .card__username:focus,
+  .card__password:focus {
+    border-bottom: 1px solid #2196F3;
+    background-color: #fff;
+  }
+  
+  .card__button {
+    font-size: 14px;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 25px;
+    background-color: #2196F3 /*#304FFE*/;
+    color: #fff;
+    text-decoration: none;
+    transition: 250ms ease;
+  }
+  
+  .card__button:hover {
+    background-color: #42A5F5;
+  }
+  
+  .card__forgotpw {
+    font-size: 10px;
+    text-align: center;
+    padding-top: 10px;
+  }
+  
+  .card__forgotpw--reset {
+    text-decoration: none;
+    color: #2196F3;
+  }
+  

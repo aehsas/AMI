@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage test results</title>
+</head>
+<body>
+  <section>
+    <div class="card">
+        <div class="heading">
+          <h2><span>Manage test results</span></h2>
+        </div>
+        <section>
+            <form  class="wrapper">
+                <select name="Category" id="cat" [(ngModel)]="Testdetes.Category" required>
+                  <option value="" disabled selected>Category</option>
+                  <option value="ARIES">ARIES</option>
+                  <option value="ATHENA">ATHENA</option>
+                </select>
+                <select name="SerialNo" id="SR" [(ngModel)]="Testdetes.SerialNo" required>
+                    <option value="" disabled selected>Serial No</option>
+                  <option value="A00021">A00021</option>
+                  <option value="A00121">A00121</option>
+                  
+                </select>
+                
+                
+                <h4><b>Date : </b>
+                  <input type="date" [(ngModel)]="Testdetes.Date" name="Date" min="01-01-1920" placeholder="Date" required>
+                </h4>
+              
+          </form>
+          <div class="but">
+              <button (click)="onSubmit()" routerLink="/Testdetails" type="submit">Submit</button>
+          </div>
+          
+           <div class="table">
+            <table>
+              <tr>
+                <th><b>Sr.No</b></th>
+                <th><b>Category</b></th>
+                <th><b>Serial No</b></th>
+                <th><b>Date</b></th>
+                <th></th>
+              </tr>
+              <tr *ngFor="let da of this.values">
+                
+                <td>{{da.id}}</td>
+                <td>{{da.Category}}</td>
+                <td>{{da.SerialNo}}</td>
+                <td>{{da.Date}} {{da.times}}</td>
+                <td><a (click)="viewsubmit(da)" >View</a></td>
+              </tr>
+              
+            </table>
+           </div>
+         
+         
+        </section>
+    </div>
+  </section>
+   
+
+
+</body>
+</html>
